@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhinaw · HostelHub – Find PG, Mess & Flats for Students</title>
-    <!-- Font Awesome 6 (free) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -20,7 +19,6 @@
             line-height: 1.5;
         }
 
-        /* ===== STICKY NAVBAR: visible on scroll ===== */
         .navbar {
             background: white;
             padding: 0.8rem 5%;
@@ -29,7 +27,6 @@
             justify-content: space-between;
             flex-wrap: wrap;
             border-bottom: 1px solid #f0eef5;
-            /* --- STICKY BEHAVIOR --- */
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -37,7 +34,6 @@
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
         }
         
-        /* subtle shadow enhancement when scrolled */
         .navbar.scrolled {
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
             background: rgba(255, 255, 255, 0.98);
@@ -48,18 +44,17 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 1rem;          /* increased gap for larger logo */
+            gap: 1rem;       
             font-weight: 700;
-            font-size: 2rem;    /* bigger brand text */
+            font-size: 2rem;  
             letter-spacing: -0.02em;
         }
 
-        /* FIX: LOGO NOW MUCH BIGGER IN SIZE (prominent & crisp) */
-        .logo-img {
-            width: 68px;         /* was 44px -> now bigger */
+           .logo-img {
+            width: 68px;         
             height: 68px;
             object-fit: cover;
-            border-radius: 20px;  /* slightly more rounded but elegant */
+            border-radius: 20px; 
             display: block;
             box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
             transition: transform 0.2s ease, box-shadow 0.2s;
@@ -140,7 +135,6 @@
             font-size: 1.2rem;
         }
 
-        /* hero */
         .hero {
             display: flex;
             flex-wrap: wrap;
@@ -210,7 +204,6 @@
             font-size: 1rem;
         }
 
-        /* main container */
         .container {
             padding: 2rem 5% 4rem;
         }
@@ -233,7 +226,6 @@
             margin-top: 0.8rem;
         }
 
-        /* student cards / listing preview */
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -337,7 +329,6 @@
             font-weight: 500;
         }
 
-        /* owner upload card (big) */
         .owner-zone {
             background: linear-gradient(145deg, #1e1b2b, #2f2860);
             border-radius: 48px;
@@ -419,7 +410,6 @@
             font-size: 1.1rem;
         }
 
-        /* How it works */
         .steps {
             display: flex;
             flex-wrap: wrap;
@@ -456,7 +446,6 @@
             margin-bottom: 0.7rem;
         }
 
-        /* footer */
         .footer {
             background: #0f0c1f;
             color: #cdc7e6;
@@ -504,7 +493,6 @@
             display: inline-block;
             margin-left: 0.5rem;
         }
-        /* responsive adjustments: keep logo prominent even on mobile */
         @media (max-width: 680px) {
             .logo span {
                 font-size: 1.6rem;
@@ -524,11 +512,9 @@
                 gap: 0.7rem;
             }
         }
-        /* clean icon fallback */
         .fa-house-circle-check {
             display: none;
         }
-        /* ensure actual image takes precedence */
         .logo i {
             display: none;
         }
@@ -538,10 +524,8 @@
     </style>
 </head>
 <body>
-    <!-- navigation: STICKY + always visible + LARGER LOGO -->
     <div class="navbar" id="mainNavbar">
         <div class="logo">
-            <!-- BIGGER LOGO: size increased to 68x68px (formerly 44px) and more visual weight -->
             <img src="Abhinaw.jpeg" alt="HostelHub Logo | Abhinaw" class="logo-img" onerror="this.onerror=null; this.style.display='none'; document.querySelector('.logo-icon-fallback').style.display='inline-block';">
             <i class="fas fa-house-circle-check logo-icon-fallback" style="display: none; font-size: 2.4rem; color:#4f39f6;"></i>
             <span>HostelHub</span>
@@ -555,7 +539,6 @@
         </div>
     </div>
 
-    <!-- hero section -->
     <div class="hero">
         <div class="hero-text">
             <div class="pill-tag"><i class="fa-regular fa-star"></i> 4,800+ students already home</div>
@@ -567,7 +550,6 @@
             </div>
         </div>
         <div class="hero-image">
-            <!-- abstract illustration (pure CSS representation) -->
             <div style="background: #dad3ff; border-radius: 24px; height: 210px; display: flex; align-items: center; justify-content: center; color: #3a2b7a; font-size: 5rem;">
                 <i class="fas fa-bed"></i><i class="fas fa-utensils" style="margin-left: 1rem;"></i>
             </div>
@@ -575,17 +557,14 @@
         </div>
     </div>
 
-    <!-- main container -->
     <div class="container">
 
-        <!-- student view: listings -->
         <div class="section-header">
             <h2>🏠 Recently added for students</h2>
             <p>PG, mess, or flat — see what owners offer (facilities, terms, rent)</p>
         </div>
 
         <div class="card-grid">
-            <!-- card 1 - PG -->
             <div class="property-card">
                 <span class="card-badge"><i class="fa-regular fa-building"></i> PG for boys</span>
                 <div class="property-title">
@@ -605,7 +584,6 @@
                 </div>
             </div>
 
-            <!-- card 2 - Mess -->
             <div class="property-card">
                 <span class="card-badge"><i class="fa-regular fa-pot-food"></i> Mess (tiffin service)</span>
                 <div class="property-title">
@@ -625,7 +603,6 @@
                 </div>
             </div>
 
-            <!-- card 3 - flat for rent -->
             <div class="property-card">
                 <span class="card-badge"><i class="fa-regular fa-building"></i> 2BHK flat (girls only)</span>
                 <div class="property-title">
@@ -646,7 +623,6 @@
             </div>
         </div>
 
-        <!-- OWNER UPLOAD ZONE (core feature) -->
         <div class="owner-zone">
             <div style="flex:1 1 300px;">
                 <h3><i class="fa-regular fa-pen-to-square"></i> Owner? List your property</h3>
@@ -696,7 +672,6 @@
             </div>
         </div>
 
-        <!-- steps for both actors -->
         <div class="section-header" style="margin-top:2rem;">
             <h2>How HostelHub works</h2>
             <p>One platform for students & owners — transparent and simple</p>
@@ -719,7 +694,6 @@
             </div>
         </div>
 
-        <!-- extra facility showcase -->
         <div style="background: white; border-radius: 48px; padding: 2.5rem; margin: 2.5rem 0;">
             <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
                 <div style="flex:1; min-width:250px;">
@@ -739,7 +713,6 @@
         </div>
     </div>
 
-    <!-- footer -->
     <div class="footer">
         <div class="footer-grid">
             <div style="max-width: 260px;">
@@ -769,11 +742,9 @@
             </div>
         </div>
         <div class="copyright">
-            © 2025 HostelHub · BY Abhinaw Singh 🎓 | Bigger logo for bold identity
+            © 2025 HostelHub · BY Abhinaw Singh 🎓
         </div>
     </div>
-
-    <!-- simple JS to add 'scrolled' class to navbar when scrolled down (enhances visibility feedback) -->
     <script>
         (function() {
             const navbar = document.getElementById('mainNavbar');
